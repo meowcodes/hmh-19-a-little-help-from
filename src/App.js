@@ -45,16 +45,35 @@ class App extends Component {
 
     addToMyList(id, editedText) {
         let newList = this.state.myList[0] ? this.state.myList.map(item => ({...item})) : [];
-        newList.push({ text: editedText })
-        console.log(newList, editedText);
+        newList.push({ text: editedText, id: uuid() })
         this.setState({
             myList: newList
+        });
+    }
+
+    updatePage(page) {
+        this.setState({
+            currPage: page
         });
     }
 
     render() {
         return (
             <div className="App">
+                <div className="App-nav">
+                    <button onClick={ () => this.updatePage("intro") }>
+                        Introduction
+                    </button>
+                    <button onClick={ () => this.updatePage("masterList") }>
+                        Activities
+                    </button>
+                    <button onClick={ () => this.updatePage("myListEdit") }>
+                        My List
+                    </button>
+                    <button onClick={ () => this.updatePage("myListShow") }>
+                        Share My List
+                    </button>
+                </div>
                 {/* { this.state.currPage === "intro" &&
                     <Introduction />
                 } */}

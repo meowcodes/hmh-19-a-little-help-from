@@ -23,7 +23,6 @@ class AddEditForm extends Component {
     }
 
     handleChange(evt) {
-        console.log(evt.target.value);
         this.setState({
             editedText: evt.target.value
         });
