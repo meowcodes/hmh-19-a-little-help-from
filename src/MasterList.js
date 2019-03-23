@@ -24,15 +24,16 @@ class MasterList extends Component {
     showAddEdit(item) {
         // show add/edit box
         this.setState({
-            addEdit: true,
-            currItem: item
+            currItem: item,
+            addEdit: true
         });
+        console.log("ITEM",item);
     }
 
     hideAddEdit(id, editedText) {
         // hide add/edit box
         this.setState({
-            addEdit: true,
+            addEdit: false,
             currItem: {}
         });
         // actually add to list
@@ -51,6 +52,7 @@ class MasterList extends Component {
                 }
                 { this.props.categories.map( category =>
                     <Category 
+                        key={ category.title }
                         title={ category.title }
                         items={ category.items }
                         notifyAdd={ this.showAddEdit }

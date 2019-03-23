@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from "./Item"
-import './Category.css';
+// import './Category.css';
 
 /**
  * Recieves ONE category with items from MasterList
@@ -19,8 +19,10 @@ class Category extends Component {
     }
 
     sendAddItem(id){
-        let item = this.props.items.filter(item => item.id === id);
+        
+        let item = this.props.items.filter(item => item.id === id)[0];
         this.props.notifyAdd(item);
+        console.log("clicked by:", id, item);
     }
 
     toggleInterest() {
@@ -46,6 +48,7 @@ class Category extends Component {
                         : "Category-items hidden"}>
                     { this.props.items.map( item => 
                         <Item 
+                            key={ item.id }
                             text={ item.text }
                             notifyAdd={ () => this.sendAddItem(item.id) }
                         />

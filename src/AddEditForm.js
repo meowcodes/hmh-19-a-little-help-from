@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AddEditForm.css';
+// import './AddEditForm.css';
 
 /**
  * Recieves ONE item text and id from MasterList
@@ -23,8 +23,9 @@ class AddEditForm extends Component {
     }
 
     handleChange(evt) {
+        console.log(evt.target.value);
         this.setState({
-            [evt.target.name]: evt.target.value
+            editedText: evt.target.value
         });
     }
 
@@ -37,8 +38,7 @@ class AddEditForm extends Component {
                         id="editedText" 
                         value={ this.state.editedText }
                         onChange={ this.handleChange }
-                        type="number">
-                    </input>
+                    />
                     <button>Add to My List</button>
                 </form>
             </div>

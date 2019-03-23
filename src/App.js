@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Introduction from './Introduction';
+// import Introduction from './Introduction';
 import MasterList from './MasterList';
 // import MyListEdit from './MyListEdit';
 // import MyListShow from './MyListShow';
@@ -13,11 +13,14 @@ import './App.css';
  */
 
 class App extends Component {
+    static defaultProps = {
+        pages: [ "intro", "masterList", "myListEdit", "myListShow"]
+    }
   
     constructor(props) {
         super(props);
         this.state = {
-            currPage: [ "intro", "masterList", "myListEdit", "myListShow"],
+            currPage: "masterList",
             myList: [],
             categories: [
                 {
@@ -43,6 +46,7 @@ class App extends Component {
     addToMyList(id, editedText) {
         let newList = this.state.myList[0] ? this.state.myList.map(item => ({...item})) : [];
         newList.push({ text: editedText })
+        console.log(newList, editedText);
         this.setState({
             myList: newList
         });
@@ -51,9 +55,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                { this.state.currPage === "intro" &&
+                {/* { this.state.currPage === "intro" &&
                     <Introduction />
-                }
+                } */}
                 { this.state.currPage === "masterList" &&
                     <MasterList 
                         categories={ this.state.categories }
