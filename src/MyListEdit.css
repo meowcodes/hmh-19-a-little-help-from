@@ -1,0 +1,11 @@
+.MyListEdit {
+    max-width: 600px;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: var(--accent-light-blue);
+    border-radius: 7px;
+}
+
+.MyListEdit-title {
+    text-align: center;
+}

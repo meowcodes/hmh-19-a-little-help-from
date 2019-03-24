@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MyListItem from './MyListItem';
-// import './MyListEdit.css';
+import './MyListEdit.css';
 
 /**
  * Receives list from App

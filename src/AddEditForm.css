@@ -17,3 +17,24 @@
     background-color: var(--accent-light-blue);
     border-radius: 8px;
 }
+
+.AddEditForm-form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddEditForm-form form {
+    text-align: center;
+}
+
+.AddEditForm-form input {
+    display: block;
+}
+
+.AddEditForm-exit-btn {
+    position: absolute;
+    right: 0;
+    margin: 1.5em;
+}

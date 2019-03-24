@@ -33,15 +33,17 @@ class AddEditForm extends Component {
             <div className="AddEditForm">
                 <div className="AddEditForm-box">
                     <button className="AddEditForm-exit-btn" onClick={ this.props.notifyExit }>X</button>
-                    <form onSubmit={ this.handleSubmit }>
-                        <input 
-                            name="editedText" 
-                            id="editedText" 
-                            value={ this.state.editedText }
-                            onChange={ this.handleChange }
-                            />
-                        <button>Add to My List</button>
-                    </form>
+                    <div className="AddEditForm-form">
+                        <form onSubmit={ this.handleSubmit }>
+                            <input 
+                                name="editedText" 
+                                id="editedText" 
+                                value={ this.state.editedText }
+                                onChange={ this.handleChange }
+                                />
+                            <button>Add to My List</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         );

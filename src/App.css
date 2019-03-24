@@ -26,12 +26,17 @@ button {
 }
 
 input {
-  border: 1px solid gainsboro;
-  padding: 0.75em;
-  width: 200px;
+  border: none;
+  background: inherit;
+  border-bottom: 1px solid black;
+  padding: 0.5em;
+  width: 300px;
   margin: 1em;
-  border-radius: 7px;
   outline: none;
+}
+
+ul {
+  padding-left: 1.5em;
 }
 
 li {
@@ -41,4 +46,10 @@ li {
 .App {
   max-width: 1080px;
   margin: 0 auto;
+}
+
+.App-nav {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em;
 }

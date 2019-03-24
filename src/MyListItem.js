@@ -46,9 +46,11 @@ class MyListItem extends Component {
 
     render() {
         return (
-            <li className>
+            <li>
                 { this.state.edit
-                    ? <form onSubmit={ this.handleSubmit }>
+                    ? <div>
+                    
+                    <form onSubmit={ this.handleSubmit }>
                         <input 
                         name="editedText" 
                         id="editedText" 
@@ -57,6 +59,7 @@ class MyListItem extends Component {
                         />
                         <button>Update</button>
                     </form>
+                    </div>
                     : <p>
                         { this.props.item.text }
                         <button onClick={ this.showEditForm }>Edit</button>
