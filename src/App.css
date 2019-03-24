@@ -50,9 +50,8 @@ li {
 
 .App-nav {
   display: flex;
-justify-content: center;
-margin: 0.5em 0;
-  margin:0 auto;
+  justify-content: center;
+  margin: 0 auto;
   max-width: 840px;
 }
 
