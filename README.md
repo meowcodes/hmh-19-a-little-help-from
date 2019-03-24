@@ -2,6 +2,8 @@
 
 We're a peer-to-peer platform to easily enable friends to support their friends who are struggling with mental health. We aim to provide a convenient way for connecting with friends and scheduling activities to conquer mental health together by providing concrete suggestions, usable message templates, and resources on how to support each other. 
 
+[Live app](http://alittlehelpfrom.herokuapp.com/)
+
 ## Resources
 
 How to be a good friend and ally: [Living document resource](https://docs.google.com/document/d/1QAMQR91Lr8-AvRaxDl6_Ztw1dICpcujl6toX_VbGWto/edit#heading=h.utznojn43f47)
