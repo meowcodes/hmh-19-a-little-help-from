@@ -1,3 +1,27 @@
-.hidden {
-    display: none;
+.Category {
+    display: inline-block;
+    width: 30%;
+    /* max-height: 300px;
+    overflow: scroll; */
+    background-color: var(--accent-light-blue);
+    border-radius: 8px;
+    margin: 1em;
+}
+
+.Category-title-box {
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Category h1 {
+    font-size: 1.25em;
+}
+
+.Category-items {
+    /* overflow: scroll; */
+}
+
+.Category ul li {
+    /* margin: 2.5em */
 }

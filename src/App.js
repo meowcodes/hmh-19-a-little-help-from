@@ -45,7 +45,7 @@ class App extends Component {
         this.removeFromMyList = this.removeFromMyList.bind(this);
     }
 
-    addToMyList(id, editedText) {
+    addToMyList(editedText) {
         let newList = this.state.myList[0] ? this.state.myList.map(item => ({...item})) : [];
         newList.push({ text: editedText, id: uuid()})
         this.setState({

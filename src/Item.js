@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Item.css';
+import './Item.css';
 
 /**
  * Recieves ONE Item with items from Category

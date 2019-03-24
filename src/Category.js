@@ -33,7 +33,7 @@ class Category extends Component {
     render() {
         return (
             <div className="Category">
-                <div>
+                <div className="Category-title-box">
                     <h1 className="Category-title">
                         { this.props.title }
                     </h1>
@@ -43,17 +43,19 @@ class Category extends Component {
                             : "+"}
                     </button>
                 </div>
-                <ul className={ this.state.interested
-                        ? "Category-items"
-                        : "Category-items hidden"}>
-                    { this.props.items.map( item => 
-                        <Item 
-                            key={ item.id }
-                            text={ item.text }
-                            notifyAdd={ () => this.sendAddItem(item.id) }
-                        />
-                    )}
-                </ul>
+                <div className={ this.state.interested
+                    ? "Category-items"
+                    : "Category-items hidden"}>
+                    <ul>
+                        { this.props.items.map( item => 
+                            <Item 
+                                key={ item.id }
+                                text={ item.text }
+                                notifyAdd={ () => this.sendAddItem(item.id) }
+                            />
+                        )}
+                    </ul>
+                </div>
             </div>
         );
     }

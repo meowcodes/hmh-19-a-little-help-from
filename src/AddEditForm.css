@@ -1,0 +1,19 @@
+.AddEditForm {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(44,44,44,0.5);
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.AddEditForm-box {
+    position: relative;
+    top: 20vh;
+    margin: auto;
+    width: 600px;
+    height: 300px;
+    background-color: var(--accent-light-blue);
+    border-radius: 8px;
+}

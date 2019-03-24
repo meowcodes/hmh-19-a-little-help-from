@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './AddEditForm.css';
+import './AddEditForm.css';
 
 /**
  * Recieves ONE item text and id from MasterList
@@ -19,7 +19,7 @@ class AddEditForm extends Component {
 
     handleSubmit(evt) {
         evt.preventDefault();
-        this.props.notifyAdd(this.props.id, this.state.editedText);
+        this.props.notifyAdd(this.state.editedText);
     }
 
     handleChange(evt) {
@@ -31,16 +31,18 @@ class AddEditForm extends Component {
     render() {
         return (
             <div className="AddEditForm">
-                <button className="AddEditForm-exit-btn" onClick={ this.props.notifyHide }>X</button>
-                <form onSubmit={ this.handleSubmit }>
-                    <input 
-                        name="editedText" 
-                        id="editedText" 
-                        value={ this.state.editedText }
-                        onChange={ this.handleChange }
-                    />
-                    <button>Add to My List</button>
-                </form>
+                <div className="AddEditForm-box">
+                    <button className="AddEditForm-exit-btn" onClick={ this.props.notifyExit }>X</button>
+                    <form onSubmit={ this.handleSubmit }>
+                        <input 
+                            name="editedText" 
+                            id="editedText" 
+                            value={ this.state.editedText }
+                            onChange={ this.handleChange }
+                            />
+                        <button>Add to My List</button>
+                    </form>
+                </div>
             </div>
         );
     }

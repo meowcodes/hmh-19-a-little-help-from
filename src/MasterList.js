@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Category from "./Category";
 import AddEditForm from "./AddEditForm";
-// import './MasterList.css';
+import './MasterList.css';
 
 /**
  * Recieves list of all categories and items
@@ -29,15 +29,16 @@ class MasterList extends Component {
         });
     }
 
-    hideAddEdit(id, editedText) {
+    hideAddEdit(editedText) {
         // hide add/edit box
         this.setState({
             addEdit: false,
             currItem: {}
         });
+
         // actually add to list
         if(editedText){
-            this.props.notifyAdd(id, editedText);
+            this.props.notifyAdd(editedText);
         }
     }
 
@@ -49,7 +50,7 @@ class MasterList extends Component {
                         text={ this.state.currItem.text }
                         id={ this.state.currItem.id }
                         notifyAdd={ this.hideAddEdit }
-                        notifyHide={ this.hideAddEdit }
+                        notifyExit={ this.hideAddEdit }
                     />
                 }
                 { this.props.categories.map( category =>
