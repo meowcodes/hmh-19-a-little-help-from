@@ -13,9 +13,11 @@ class Category extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            interested: true
+            interested: true,
+            expanded: false
         }
         this.toggleInterest = this.toggleInterest.bind(this);
+        this.expandCategory = this.expandCategory.bind(this);
     }
 
     sendAddItem(id){
@@ -28,6 +30,13 @@ class Category extends Component {
         this.setState({
             interested: !curr
         });
+    }
+    
+    expandCategory() {
+        let curr = this.state.expanded;
+        this.setState({
+            expanded: !curr
+        })
     }
 
     render() {
@@ -43,9 +52,12 @@ class Category extends Component {
                             : "+"}
                     </button>
                 </div>
-                <div className={ this.state.interested
-                    ? "Category-items"
-                    : "Category-items hidden"}>
+                <div className={`${ this.state.interested 
+                    ? "Category-items "
+                    : "Category-items hidden"} ${ this.state.expanded
+                        ? "expand"
+                        : "box"
+                    }`}>
                     <ul>
                         { this.props.items.map( item => 
                             <Item 
@@ -55,6 +67,15 @@ class Category extends Component {
                             />
                         )}
                     </ul>
+                    <div className="Category-bottom">
+                        <button className="Category-expand-btn" onClick= { this.expandCategory }>
+                            { this.state.expanded
+                                ? <span><i class="fas fa-caret-up"></i>  See Less</span>
+                                : <span><i class="fas fa-caret-down"></i>  See More</span>
+                            }
+                            
+                        </button>
+                    </div>
                 </div>
             </div>
         );

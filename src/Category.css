@@ -18,10 +18,33 @@
     font-size: 1.25em;
 }
 
-.Category-items {
-    /* overflow: scroll; */
+
+.box {
+    max-height: 250px;
+    overflow: hidden;
 }
 
-.Category ul li {
-    /* margin: 2.5em */
+.box ul {
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.Category-bottom {
+    text-align: center;
+}
+
+.Category-expand-btn {
+    margin: 1em auto;
+    border: none;
+    color: black;
+}
+
+.Category-toggle-btn {
+    padding: 0.25em 0.75em;
+    height: 2em;
+    width: 2em;
+}
+
+.expand {
+
 }

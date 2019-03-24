@@ -2,3 +2,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+.MyListItem-text input {
+    margin: 0;
+    padding: 0;
+}
