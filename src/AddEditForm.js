@@ -15,6 +15,7 @@ class AddEditForm extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     handleSubmit(evt) {
@@ -31,6 +32,7 @@ class AddEditForm extends Component {
     render() {
         return (
             <div className="AddEditForm">
+                <button className="AddEditForm-exit-btn" onClick={ this.props.notifyHide }>X</button>
                 <form onSubmit={ this.handleSubmit }>
                     <input 
                         name="editedText" 

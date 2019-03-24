@@ -19,10 +19,8 @@ class Category extends Component {
     }
 
     sendAddItem(id){
-        
         let item = this.props.items.filter(item => item.id === id)[0];
         this.props.notifyAdd(item);
-        console.log("clicked by:", id, item);
     }
 
     toggleInterest() {
