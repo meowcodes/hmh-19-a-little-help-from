@@ -70,8 +70,8 @@ class Category extends Component {
                     <div className="Category-bottom">
                         <button className="Category-expand-btn" onClick= { this.expandCategory }>
                             { this.state.expanded
-                                ? <span><i class="fas fa-caret-up"></i>  See Less</span>
-                                : <span><i class="fas fa-caret-down"></i>  See More</span>
+                                ? <span><i className="fas fa-caret-up"></i>  See Less</span>
+                                : <span><i className="fas fa-caret-down"></i>  See More</span>
                             }
                             
                         </button>

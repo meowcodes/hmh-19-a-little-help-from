@@ -5,6 +5,7 @@ import MyListEdit from './MyListEdit';
 import MyList from './MyList';
 import uuid from 'uuid/v4';
 import './App.css';
+import logo from './h_logo.svg';
 
 /**
  * 
@@ -177,7 +178,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="App-nav">
-                    <img src="h_logo.svg" alt="" class="logo" />
+                    <img src={logo} alt="" className="logo" />
                         <button onClick={() => this.updatePage("intro")}>
                             Introduction
                    </button>
