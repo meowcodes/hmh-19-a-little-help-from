@@ -10,7 +10,9 @@ How to be a good friend and ally: [Living document resource](https://docs.google
 
 These resources have been collected and written up over the course of this weekend to guide friends on how to support their friends who are struggling with various mental health issues.
 
-## Internal
+## About
+
+Slide Presentation: [Presentation](https://docs.google.com/presentation/d/1s1oTgJPZqxh0cFrhtdc2_mE2qUFQIF_gCoppMUgi6g0/edit#slide=id.p)
 
 Project description: [Living document resource](https://docs.google.com/document/d/1Y4MOQgPpRYH28mzJAP82fnEaUPd6EEWSQQUTiQznEwc/edit#)
 
