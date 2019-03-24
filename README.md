@@ -1,3 +1,10 @@
+
+## Resources
+
+How to be a good friend and ally: [Living document resource](https://docs.google.com/document/d/1QAMQR91Lr8-AvRaxDl6_Ztw1dICpcujl6toX_VbGWto/edit#heading=h.utznojn43f47)
+
+Project description: [Living document resource](https://docs.google.com/document/d/1Y4MOQgPpRYH28mzJAP82fnEaUPd6EEWSQQUTiQznEwc/edit#)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
