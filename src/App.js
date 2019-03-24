@@ -21,7 +21,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currPage: "masterList",
+            currPage: "intro",
             myList: [],
             categories: [
                 {
