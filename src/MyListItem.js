@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './MyListItem.css'
 /**
  * Receives ONE item from MyListEdit
  * Renders a text or an input item (if being edited)
@@ -46,25 +46,28 @@ class MyListItem extends Component {
 
     render() {
         return (
-            <li>
+            <li className="MyListItem">
                 { this.state.edit
-                    ? <div>
-                    
-                    <form onSubmit={ this.handleSubmit }>
-                        <input 
-                        name="editedText" 
-                        id="editedText" 
-                        value={ this.state.editedText }
-                        onChange={ this.handleChange }
-                        />
-                        <button>Update</button>
-                    </form>
+                    ? <div >
+                        <form className="MyListItem-text" onSubmit={ this.handleSubmit }>
+                            <input 
+                            name="editedText" 
+                            id="editedText" 
+                            value={ this.state.editedText }
+                            onChange={ this.handleChange }
+                            />
+                            <div>
+                                <button>Update</button>
+                            </div>
+                        </form>
                     </div>
-                    : <p>
-                        { this.props.item.text }
-                        <button onClick={ this.showEditForm }>Edit</button>
-                        <button onClick={ () => this.props.notifyRemove(this.props.item.id) }>Remove</button>
-                    </p>
+                    : <div className="MyListItem-text">
+                        <p>{ this.props.item.text }</p>
+                        <div>
+                            <button onClick={ this.showEditForm }>Edit</button>
+                            <button onClick={ () => this.props.notifyRemove(this.props.item.id) }>Remove</button>
+                        </div>
+                    </div>
                 }
 
             </li>
