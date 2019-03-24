@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from "./Item"
-// import './Category.css';
+import './Category.css';
 
 /**
  * Recieves ONE category with items from MasterList
@@ -27,7 +27,7 @@ class Category extends Component {
         let curr = this.state.interested;
         this.setState({
             interested: !curr
-        })
+        });
     }
 
     render() {
@@ -38,7 +38,9 @@ class Category extends Component {
                         { this.props.title }
                     </h1>
                     <button className="Category-toggle-btn" onClick={ this.toggleInterest }>
-                        +
+                        { this.state.interested
+                            ? "-"
+                            : "+"}
                     </button>
                 </div>
                 <ul className={ this.state.interested
