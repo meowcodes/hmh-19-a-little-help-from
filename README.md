@@ -5,8 +5,11 @@ We're a peer-to-peer platform to easily enable friends to support their friends 
 ## Resources
 
 How to be a good friend and ally: [Living document resource](https://docs.google.com/document/d/1QAMQR91Lr8-AvRaxDl6_Ztw1dICpcujl6toX_VbGWto/edit#heading=h.utznojn43f47)
+These resources have been collected and written up over the course of this weekend to guide friends on how to support their friends who are struggling with various mental health issues.
 
 Project description: [Living document resource](https://docs.google.com/document/d/1Y4MOQgPpRYH28mzJAP82fnEaUPd6EEWSQQUTiQznEwc/edit#)
+
+Project Management: [Living document resource](https://docs.google.com/document/d/1DBT44SzThdp4aHAmq0L-eg4DlzSZKMrLbN76HZPtrU4/edit)
 
 # ++++++++
 
