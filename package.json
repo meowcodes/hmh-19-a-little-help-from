@@ -31,7 +31,7 @@
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Prototype from a mental health hackathon, preparing a list of activities you want your friends to help with. – This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "repository": {
     "type": "git",
