@@ -177,41 +177,42 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="App-nav">
-                    <button onClick={() => this.updatePage("intro")}>
-                        Introduction
-                    </button>
-                    <button onClick={() => this.updatePage("masterList")}>
-                        Activities
-                    </button>
-                    <button onClick={() => this.updatePage("myListEdit")}>
-                        Edit My List
-                    </button>
-                    <button onClick={() => this.updatePage("myList")}>
-                        Share My List
-                    </button>
+                    <img src="h_logo.svg" alt="" class="logo" />
+                        <button onClick={() => this.updatePage("intro")}>
+                            Introduction
+                   </button>
+                        <button onClick={() => this.updatePage("masterList")}>
+                            Activities
+                   </button>
+                        <button onClick={() => this.updatePage("myListEdit")}>
+                            Edit My List
+                   </button>
+                        <button onClick={() => this.updatePage("myList")}>
+                            Share My List
+                   </button>
                 </div>
-                {this.state.currPage === "intro" &&
-                    <Introduction nextPage={() => this.updatePage("masterList")}/>
-                }
-                {this.state.currPage === "masterList" &&
-                    <MasterList
-                        categories={this.state.categories}
-                        notifyAdd={this.addToMyList}
-                    />
-                }
-                {this.state.currPage === "myListEdit" &&
-                    <MyListEdit
-                        list={this.state.myList}
-                        notifyEdit={this.editMyList}
-                        notifyRemove={this.removeFromMyList}
-                    />
-                }
-                {this.state.currPage === "myList" &&
-                    <MyList list={this.state.myList} />
-                }
-            </div>
-        );
-    }
-}
-
-export default App;
+                    {this.state.currPage === "intro" &&
+                        <Introduction nextPage={() => this.updatePage("masterList")} />
+                    }
+                    {this.state.currPage === "masterList" &&
+                        <MasterList
+                            categories={this.state.categories}
+                            notifyAdd={this.addToMyList}
+                        />
+                    }
+                    {this.state.currPage === "myListEdit" &&
+                        <MyListEdit
+                            list={this.state.myList}
+                            notifyEdit={this.editMyList}
+                            notifyRemove={this.removeFromMyList}
+                        />
+                    }
+                    {this.state.currPage === "myList" &&
+                        <MyList list={this.state.myList} />
+                    }
+                </div>
+                );
+            }
+        }
+        
+        export default App;
