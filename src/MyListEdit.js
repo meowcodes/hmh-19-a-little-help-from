@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-// import './MyList.css';
+import MyListItem from './MyListItem';
+// import './MyListEdit.css';
 
 /**
  * Receives list from App
- * Renders My List Page
- * Allow editing and sharing with friends
+ * Renders My List Page with editing features
+ * Sends edited text to App
  */
 
-class MyList extends Component {
+class MyListEdit extends Component {
     static defaultProps = {
         list: [ 
             {text: "go swimming", id: 1},
@@ -24,21 +25,18 @@ class MyList extends Component {
 
     render() {
         return (
-            <div className="MyList">
-                <div className="MyList-show">
-                    <h3 className="MyList-title">My List</h3>
-                    <ul className="MyList-list">
+            <div className="MyListEdit">
+                <div className="MyListEdit-show">
+                    <h3 className="MyListEdit-title">My List</h3>
+                    <ul className="MyListEdit-list">
                         { this.props.list.map( item =>
-                            <li className="MyList-list-item" key={ item.id }>{ item.text }</li>
+                            <MyListItem key={ item.id } item={ item } notifyEdit={ this.props.notifyEdit }/>
                         )}
                     </ul>
-                </div>
-                <div className="MyList-share">
-                    <h3 className="MyList-title">Share with Friends</h3>
                 </div>
             </div>
         );
     }
 }
 
-export default MyList;
+export default MyListEdit;
