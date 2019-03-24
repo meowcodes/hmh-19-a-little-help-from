@@ -27,7 +27,6 @@ class MasterList extends Component {
             addEdit: true,
             currItem: item
         });
-        console.log("ITEM",item);
     }
 
     hideAddEdit(id, editedText) {

@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 // import Introduction from './Introduction';
 import MasterList from './MasterList';
-// import MyListEdit from './MyListEdit';
-// import MyListShow from './MyListShow';
+import MyList from './MyList';
 import uuid from 'uuid/v4';
 import './App.css';
 
 /**
  * 
- * Renders Intro Page, Master List Page, My List Edit Page, or My List Show Page
+ * Renders Intro Page, Master List Page, My List Page
  * 
  */
 
 class App extends Component {
     static defaultProps = {
-        pages: [ "intro", "masterList", "myListEdit", "myListShow"]
+        pages: [ "intro", "masterList", "myList"]
     }
   
     constructor(props) {
@@ -67,11 +66,8 @@ class App extends Component {
                     <button onClick={ () => this.updatePage("masterList") }>
                         Activities
                     </button>
-                    <button onClick={ () => this.updatePage("myListEdit") }>
+                    <button onClick={ () => this.updatePage("myList") }>
                         My List
-                    </button>
-                    <button onClick={ () => this.updatePage("myListShow") }>
-                        Share My List
                     </button>
                 </div>
                 {/* { this.state.currPage === "intro" &&
@@ -83,12 +79,9 @@ class App extends Component {
                         notifyAdd={ this.addToMyList }
                     />
                 }
-                {/* { this.state.currPage === "myListEdit" &&
-                    <MyListEdit list={ this.state.myList } />
+                { this.state.currPage === "myList" &&
+                    <MyList list={ this.state.myList } />
                 }
-                { this.state.currPage === "myListShow" &&
-                    <MyListShow list={ this.state.myList } />
-                } */}
             </div>
         );
     }
