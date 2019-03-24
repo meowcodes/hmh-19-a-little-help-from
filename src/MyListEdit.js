@@ -30,7 +30,12 @@ class MyListEdit extends Component {
                     <h3 className="MyListEdit-title">My List</h3>
                     <ul className="MyListEdit-list">
                         { this.props.list.map( item =>
-                            <MyListItem key={ item.id } item={ item } notifyEdit={ this.props.notifyEdit }/>
+                            <MyListItem 
+                                key={ item.id } 
+                                item={ item } 
+                                notifyEdit={ this.props.notifyEdit }
+                                notifyRemove={ this.props.notifyRemove }
+                            />
                         )}
                     </ul>
                 </div>

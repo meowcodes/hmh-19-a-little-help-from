@@ -42,6 +42,7 @@ class App extends Component {
         }
         this.addToMyList = this.addToMyList.bind(this);
         this.editMyList = this.editMyList.bind(this);
+        this.removeFromMyList = this.removeFromMyList.bind(this);
     }
 
     addToMyList(id, editedText) {
@@ -59,6 +60,13 @@ class App extends Component {
                 : {...item}
             )
         );
+        this.setState({
+            myList: newList
+        });
+    }
+
+    removeFromMyList(id) {
+        let newList = this.state.myList.filter(item => item.id !== id);
         this.setState({
             myList: newList
         });
@@ -97,7 +105,11 @@ class App extends Component {
                     />
                 }
                 { this.state.currPage === "myListEdit" &&
-                    <MyListEdit list={ this.state.myList } notifyEdit={ this.editMyList }/>
+                    <MyListEdit 
+                        list={ this.state.myList } 
+                        notifyEdit={ this.editMyList }
+                        notifyRemove={ this.removeFromMyList }
+                    />
                 }
                 { this.state.currPage === "myList" &&
                     <MyList list={ this.state.myList } />

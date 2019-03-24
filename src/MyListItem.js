@@ -60,8 +60,10 @@ class MyListItem extends Component {
                     : <p>
                         { this.props.item.text }
                         <button onClick={ this.showEditForm }>Edit</button>
+                        <button onClick={ () => this.props.notifyRemove(this.props.item.id) }>Remove</button>
                     </p>
                 }
+
             </li>
         );
     }
