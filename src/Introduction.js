@@ -28,10 +28,10 @@ class Introduction extends Component {
             <div className="Introduction">
                 <section>
                 <div className="container">
-                    <h1 className="Introduction-title">Fight Stigma, Find Support</h1>
+                    <h1 className="Introduction-title">Find Support from Your Social Network</h1>
                     <div className="Introduction-text">
-                        <p>A Little Help From is a peer-to-peer platform that bridges the gap between mental health and socializing.</p>
-                        <p>We aim to provide a convenient and confidential safe-space for connecting with supportive allies, educating your loved ones about your mental health and other struggles, and scheduling activities that bring you joy.
+                        <p>We’ve bridged the gap between mental health and socializing. Connect with your friends to find activities in your area that will bring you joy.</p>
+                        <p>We simplfy and organize reaching out to your friends for help, scheduling activities. We provide concrete suggestions, usable message templates, and resources to make mental health support simple and straightforward, circumventing stigma by making it seem a normal thing to do.
                         </p>
                     </div>
                     <button onClick={ this.props.nextPage }>Connect Now</button>
